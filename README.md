@@ -47,4 +47,44 @@ progress-bar 영역에 값을 설정할 수 있습니다. jquery 옵션보다 �
 - data-min - 최소값 (기본 0)
 - data-max - 최대값 (기본 100)
 - data-value - 현재값 (기본 0)
-- data-
+- data-color - progressbar 색상 (기본 gradient)
+- data-width - progressbar 폭 (기본 '100%')
+- data-height - progressbar 높이 (기본 '5px')
+
+## progress-bar 생성
+
+jQuery로 progress-bar를 생성합니다.
+
+```js
+$(function(){
+    $("#loading-bar").progressbar({옵션});
+});
+```
+
+모든 기본 옵션은 다음과 같으며, `data-` 속성이 있는 경우 `data-` 속성이 우선 적용됩니다.
+
+```js
+{
+    //progress-bar 색상
+    color:"linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)",
+    //progress-bar 넓이 (ex : "200px", "50%")
+    width:"100%",
+    //progress-bar 높이
+    height:"5px",
+    //progress-bar 최소값
+    min:0,
+    //progress-bar 최대값
+    max:100,
+    //progress-bar 현재값
+    value:0,
+    //progress-bar percent 표시 옵션
+    percent:{
+        //percent 표시 여부 (true/false)
+        show:false,
+        //percent 표시 위치(top/left/right/bottom)
+        position:"right",
+        //percent 글자 색상(css background에 설정 가능한 값)
+        color:"black",
+    },
+}
+```
