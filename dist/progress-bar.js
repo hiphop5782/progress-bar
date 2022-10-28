@@ -39,9 +39,9 @@
         }, options);
 
         return this.each(function(){
-            settings.min = $(this).data("min") || settings.min;
-            settings.max = $(this).data("max") || settings.max;
-            settings.value = $(this).data("value") || settings.value;
+            settings.min = parseInt($(this).data("min") || settings.min);
+            settings.max = parseInt($(this).data("max") || settings.max);
+            settings.value = parseInt($(this).data("value") || settings.value);
             settings.color = $(this).data("color") || settings.color;
             settings.width = $(this).data("width") || settings.width;
             settings.height = $(this).data("height") || settings.height;
