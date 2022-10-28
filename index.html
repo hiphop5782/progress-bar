@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery-progress-bar</title>
+    <style>
+        .container {
+            width:500px;
+            margin:50px auto;
+        }
+        .row {
+            margin:10px 0;
+        }
+        .center {
+            text-align: center;
+        }
+        pre {
+            margin:2em 0;
+            font-size: 20px;
+        }
+        pre code.hljs {
+            border-radius: 10px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/github-dark.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./dist/progress-bar.js"></script>
+    <script>
+        $(function(){
+            $("#loading-bar-1").progressbar();
+            $("#loading-bar-2").progressbar({
+                width:"200px"
+            });
+            $("#loading-bar-3").progressbar({
+                height:"50px"
+            });
+            $("#loading-bar-4").progressbar({
+                color:"dodgerblue"
+            });
+            $("#loading-bar-5").progressbar({
+                min:50, max:150
+            });
+            $("#loading-bar-6").progressbar();
+            $("#loading-bar-7").progressbar({
+                percent:{
+                    show:true
+                }
+            });
+            $("#loading-bar-8").progressbar({
+                percent:{
+                    show:true,
+                    position:"top"
+                }
+            });
+            $("#loading-bar-9").progressbar({
+                percent:{
+                    show:true,
+                    position:"bottom"
+                }
+            });
+            $("#loading-bar-10").progressbar({
+                percent:{
+                    show:true,
+                    position:"bottom",
+                    color:"red"
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row center">
+            <h1>ProgressBar Demo<br><small>(jQuery plugin)</small></h1>
+        </div>
+        
+        <div class="row">
+            <h2>Demo 1</h2>
+        </div>
+        <div class="row">
+            <pre><code>$("#loading-bar-1").progressbar();</code></pre>
+        </div>
+        <div class="row">
+            <pre><code>&lt;div id="loading-bar-1"data-value="85"&gt;</code></pre>
+        </div>
+        <div class="row">
+            <div id="loading-bar-1" data-value="85"></div>
+        </div>
+
+        <hr style="margin:50px 0;">
+
+        <div class="row">
+            <h2>Demo 2</h2>
+        </div>
+        <div class="row">
+            <pre><code>$("#loading-bar-2").progressbar({
+    width:"200px"
+});</code></pre>
+</div>
+        <div class="row">
+            <pre><code>&lt;div id="loading-bar-2"data-value="85"&gt;</code></pre>
+        </div>
+        <div class="row">
+            <div id="loading-bar-2" data-value="85"></div>
+        </div>
+
+        <hr style="margin:50px 0;">
+
+        <div class="row">
+            <h2>Demo 3</h2>
+        </div>
+        <div class="row">
+            <pre><code>$("#loading-bar-3").progressbar({
+    height:"50px"
+});</code></pre>
+        </div>
+        <div class="row">
+            <pre><code>&lt;div id="loading-bar-3"data-value="85"&gt;</code></pre>
+        </div>
+        <div class="row">
+            <div id="loading-bar-3" data-value="85"></div>
+        </div>
+
+        <hr style="margin:50px 0;">
+
+        <div class="row">
+            <h2>Demo 4</h2>
+        </div>
+        <div class="row">
+            <pre><code>$("#loading-bar-4").progressbar({
+    color:"dodgerblue"
+});</code></pre>
+        </div>
+        <div class="row">
+            <pre><code>&lt;div id="loading-bar-4"data-value="85"&gt;</code></pre>
+        </div>
+        <div class="row">
+            <div id="loading-bar-4" data-value="85"></div>
+        </div>
+
+        <hr style="margin:50px 0;">
+
+        <div class="row">
+            <h2>Demo 5</h2>
+        </div>
+        <div class="row">
+            <pre><code>$("#loading-bar-5").progressbar({
+    min:50, max:150
+});</code></pre>
+        <div class="row">
+            <pre><code>&lt;div id="loading-bar-5"data-value="85"&gt;</code></pre>
+        </div>
+        </div>
+        <div class="row">
+            <div id="loading-bar-5" data-value="85"></div>
+        </div>
+
+        <hr style="margin:50px 0;">
+
+        <div class="row">
+            <h2>Demo 6</h2>
+        </div>
+        <div class="row">
+            <pre><code>$("#loading-bar-6").progressbar();</code></pre>
+        </div>
+        <div class="row">
+            <pre><code>&lt;div id="loading-bar-6" data-min="50" 
+        data-max="150" data-value="85"&gt;</code></pre>
+        </div>
+        <div class="row">
+            <div id="loading-bar-6" data-min="50" data-max="150" data-value="85"></div>
+        </div>
+
+        <hr style="margin:50px 0;">
+
+        <div class="row">
+            <h2>Demo 7</h2>
+        </div>
+        <div class="row">
+            <pre><code>$("#loading-bar-7").progressbar({
+    percent:{
+        show:true
+    }
+});</code></pre>
+        </div>
+        <div class="row">
+            <pre><code>&lt;div id="loading-bar-8" data-value="85"&gt;</code></pre>
+        </div>
+        <div class="row">
+            <div id="loading-bar-7" data-value="85"></div>
+        </div>
+
+        <hr style="margin:50px 0;">
+
+        <div class="row">
+            <h2>Demo 8</h2>
+        </div>
+        <div class="row">
+            <pre><code>$("#loading-bar-8").progressbar({
+    percent:{
+        show:true,
+        position:"top"
+    }
+});</code></pre>
+        </div>
+        <div class="row">
+            <pre><code>&lt;div id="loading-bar-8" data-value="85"&gt;</code></pre>
+        </div>
+        <div class="row">
+            <div id="loading-bar-8" data-value="85"></div>
+        </div>
+
+        <hr style="margin:50px 0;">
+
+        <div class="row">
+            <h2>Demo 9</h2>
+        </div>
+        <div class="row">
+            <pre><code>$("#loading-bar-9").progressbar({
+    percent:{
+        show:true,
+        position:"bottom"
+    }
+});</code></pre>
+        </div>
+        <div class="row">
+            <pre><code>&lt;div id="loading-bar-8" data-value="85"&gt;</code></pre>
+        </div>
+        <div class="row">
+            <div id="loading-bar-9" data-value="85"></div>
+        </div>
+
+        <hr style="margin:50px 0;">
+
+        <div class="row">
+            <h2>Demo 10</h2>
+        </div>
+        <div class="row">
+            <pre><code>$("#loading-bar-10").progressbar({
+    percent:{
+        show:true,
+        position:"bottom",
+        color:"red"
+    }
+});</code></pre>
+        </div>
+        <div class="row">
+            <pre><code>&lt;div id="loading-bar-8" data-value="85"&gt;</code></pre>
+        </div>
+        <div class="row">
+            <div id="loading-bar-10" data-value="85"></div>
+        </div>
+    </div>
+</body>
+</html>
